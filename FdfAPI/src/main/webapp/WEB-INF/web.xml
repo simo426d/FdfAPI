@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app version="4.0" 
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+		
+   <display-name>
+      Fit Dig Frem
+   </display-name>
+   
+   <servlet>
+      <servlet-name>APIServlet</servlet-name>
+      <servlet-class>dk.tec.ajs.APIServlet</servlet-class>
+      <load-on-startup>1</load-on-startup>
+		
+   </servlet>
+
+   <servlet-mapping>
+      <servlet-name>APIServlet</servlet-name>
+      <url-pattern>/api/extract/*</url-pattern>
+   </servlet-mapping>
+   
+   
+   
+   <servlet>
+      <servlet-name>APIOevelseServlet</servlet-name>
+      <servlet-class>dk.tec.ajs.APIOevelseServlet</servlet-class>
+      <load-on-startup>2</load-on-startup>
+		
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>APIOevelseServlet</servlet-name>
+      <url-pattern>/api/trainingsession/*</url-pattern>
+   </servlet-mapping>
+   
+  
+   
+   <servlet>
+      <servlet-name>APIPreOevelseServlet</servlet-name>
+      <servlet-class>dk.tec.ajs.APIPreOevelseServlet</servlet-class>
+      <load-on-startup>3</load-on-startup>
+		
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>APIPreOevelseServlet</servlet-name>
+      <url-pattern>/api/pretrainingsession/*</url-pattern>
+   </servlet-mapping>
+   
+   
+   
+   <servlet>
+      <servlet-name>APIPrePlanerServlet</servlet-name>
+      <servlet-class>dk.tec.ajs.APIPrePlanerServlet</servlet-class>
+      <load-on-startup>4</load-on-startup>
+		
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>APIPrePlanerServlet</servlet-name>
+      <url-pattern>/api/preplansession/*</url-pattern>
+   </servlet-mapping>
+    
+    
+   <servlet>
+      <servlet-name>APIPreTraeningsPlanServlet</servlet-name>
+      <servlet-class>dk.tec.ajs.APIPreTraeningsPlanServlet</servlet-class>
+      <load-on-startup>5</load-on-startup>
+		
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>APIPreTraeningsPlanServlet</servlet-name>
+      <url-pattern>/api/pretraeningssession/*</url-pattern>
+   </servlet-mapping>
+   
+   
+    <servlet>
+      <servlet-name>APIUserPlanerServlet</servlet-name>
+      <servlet-class>dk.tec.ajs.APIUserPlanerServlet</servlet-class>
+      <load-on-startup>6</load-on-startup>
+		
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>APIUserPlanerServlet</servlet-name>
+      <url-pattern>/api/plansession/*</url-pattern>
+   </servlet-mapping>
+   
+   
+    <servlet>
+      <servlet-name>APITraeningsPlanServlet</servlet-name>
+      <servlet-class>dk.tec.ajs.APITraeningsPlanServlet</servlet-class>
+      <load-on-startup>7</load-on-startup>
+		
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>APITraeningsPlanServlet</servlet-name>
+      <url-pattern>/api/traeningssession/*</url-pattern>
+   </servlet-mapping>
+	
+</web-app>
